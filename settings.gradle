@@ -1,0 +1,4 @@
+rootProject.name = 'poc-gradle-bom-strategy-gradle-project'
+
+include 'library'
+include 'application'
