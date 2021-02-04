@@ -1,6 +1,8 @@
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-actuator'
     implementation 'org.springframework.boot:spring-boot-starter-web'
+    // add activemq dependency to the jar
+    implementation 'org.apache.activemq:activemq-amqp'
 
     api project(":library")
 

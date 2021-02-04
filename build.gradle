@@ -15,6 +15,11 @@ allprojects {
     version = '0.0.1-SNAPSHOT'
     sourceCompatibility = '1.8'
 }
+
+repositories {
+    mavenCentral()
+}
+
 subprojects {
 
     apply plugin: 'org.springframework.boot'
@@ -24,6 +29,13 @@ subprojects {
 
     repositories {
         mavenCentral()
+    }
+
+    dependencies {
+        // import a bom
+        // can use platform vs enforcedPlatform at the project level
+        // implementation platform('com.accesso.passport:passport-platform:1.0.0-SNAPSHOT')
+        implementation platform('org.springframework.boot:spring-boot-dependencies:1.5.8.RELEASE')
     }
 
     test {
